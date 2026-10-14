@@ -1671,7 +1671,40 @@ function renderServiceItemsPublic(items) {
     if (!cards.length) return;
 
     items.forEach((item, index) => {
+        const serviceContent =
+    card.querySelector(".service-content");
 
+let serviceLink =
+    card.querySelector(".service-link");
+
+if (!serviceLink && item.link) {
+
+    serviceLink =
+        document.createElement("a");
+
+    serviceLink.className =
+        "service-link";
+
+    serviceLink.textContent =
+        "XEM VIDEO ↗";
+
+    serviceContent.appendChild(serviceLink);
+}
+
+if (serviceLink) {
+
+    if (item.link) {
+
+        serviceLink.href = item.link;
+        serviceLink.target = "_blank";
+        serviceLink.rel = "noopener noreferrer";
+        serviceLink.style.display = "inline-flex";
+
+    } else {
+
+        serviceLink.style.display = "none";
+    }
+}
         const card =
             cards[index];
 
