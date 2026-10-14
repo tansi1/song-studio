@@ -1671,7 +1671,21 @@ function renderServiceItemsPublic(items) {
     if (!cards.length) return;
 
     items.forEach((item, index) => {
-        const serviceContent =
+
+        const card =
+            cards[index];
+
+        if (!card) return;
+
+        const number =
+            card.querySelector(".service-number");
+
+        const title =
+            card.querySelector("h3");
+
+        const description =
+            card.querySelector("p");
+                const serviceContent =
     card.querySelector(".service-content");
 
 let serviceLink =
@@ -1705,20 +1719,6 @@ if (serviceLink) {
         serviceLink.style.display = "none";
     }
 }
-        const card =
-            cards[index];
-
-        if (!card) return;
-
-        const number =
-            card.querySelector(".service-number");
-
-        const title =
-            card.querySelector("h3");
-
-        const description =
-            card.querySelector("p");
-
 
         if (number) {
             number.textContent =
