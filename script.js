@@ -1466,7 +1466,12 @@ async function loadPublicContactInfo() {
     }
 
     if (!data) return;
+const footerLogoImg =
+    document.getElementById("footerLogoImg");
 
+if (footerLogoImg && data.logo_url) {
+    footerLogoImg.src = data.logo_url;
+}
 
     const tagline =
         document.getElementById("footerTagline");

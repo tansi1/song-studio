@@ -2662,14 +2662,31 @@ function renderContactInfo(contact) {
             class="contact-editor"
             data-id="${contact.id}"
         >
-
-            <div class="contact-form-grid">
-                <div class="contact-field full">
+<div class="contact-form-grid">
+           <div class="contact-field full">
     <label>Logo Footer</label>
 
+    ${
+        contact.logo_url
+            ? `
+                <img
+                    src="${escapeHtml(contact.logo_url)}"
+                    class="footer-logo-preview"
+                    alt="Logo Footer"
+                >
+            `
+            : ""
+    }
+
     <input
-        type="text"
-        class="contact-logo-url"
+        type="file"
+        class="footer-logo-file"
+        accept="image/png,image/jpeg,image/webp"
+    >
+
+    <input
+        type="hidden"
+        class="footer-logo-url"
         value="${escapeHtml(contact.logo_url || "")}"
     >
 </div>
@@ -2776,9 +2793,12 @@ function renderContactInfo(contact) {
         editor?.querySelector(".contact-save");
 
     saveBtn?.addEventListener(
-        "click",
-        () => updateContactInfo(editor)
-    );
+    "click",
+    () => {
+        console.log("ĐÃ BẤM NÚT LƯU CONTACT");
+        updateContactInfo(editor);
+    }
+);
 }
 async function updateContactInfo(editor) {
 
@@ -2788,7 +2808,29 @@ async function updateContactInfo(editor) {
     const status =
         editor.querySelector(".contact-status");
 
+    const logoInput =
+    editor.querySelector(".footer-logo-file");
 
+let logoUrl =
+    editor.querySelector(".footer-logo-url")
+        ?.value || "";
+
+if (
+    logoInput &&
+    logoInput.files &&
+    logoInput.files.length > 0
+) {
+    try {
+        logoUrl =
+            await uploadFooterLogo(
+                logoInput.files[0]
+            );
+    } catch (error) {
+        alert("Upload logo thất bại.");
+        return;
+    }
+}
+console.log("LOGO URL TRƯỚC KHI LƯU:", logoUrl);
     const payload = {
 
 
@@ -2800,9 +2842,7 @@ async function updateContactInfo(editor) {
             editor.querySelector(".contact-phone")
             ?.value.trim() || "",
              
-        logo_url:
-            editor.querySelector(".contact-logo-url")
-            ?.value.trim() || "",
+        logo_url: logoUrl,
 
         footer_description:
             editor.querySelector(".contact-footer-description")
@@ -2832,7 +2872,7 @@ async function updateContactInfo(editor) {
         .from("contact_info")
         .update(payload)
         .eq("id", id);
-
+        console.log("UPDATE CONTACT ERROR:", error);
 
     if (error) {
 
@@ -3925,5 +3965,44 @@ async function uploadServiceImage(file, serviceId) {
         .from("service-images")
         .getPublicUrl(filePath);
 
+    return data.publicUrl;
+}
+async function uploadFooterLogo(file) {
+
+    if (!file) return null;
+
+    const extension =
+        file.name.split(".").pop();
+
+    const fileName =
+        `footer-logo-${Date.now()}.${extension}`;
+
+    const filePath =
+        `logos/${fileName}`;
+
+    const {
+        error: uploadError
+    } = await supabase.storage
+        .from("footer-assets")
+        .upload(filePath, file, {
+            cacheControl: "3600",
+            upsert: false
+        });
+
+    if (uploadError) {
+        console.error(
+            "Upload footer logo error:",
+            uploadError
+        );
+
+        throw uploadError;
+    }
+
+    const {
+        data
+    } = supabase.storage
+        .from("footer-assets")
+        .getPublicUrl(filePath);
+    console.log("FOOTER LOGO PUBLIC URL:", data.publicUrl);
     return data.publicUrl;
 }
