@@ -3227,15 +3227,7 @@ function renderServiceItems(items) {
                     >${escapeHtml(item.description || "")}</textarea>
                 </div>
 
-                <div class="service-field full">
-                    <label>Link</label>
-
-                    <input
-                        type="text"
-                        class="service-link"
-                        value="${escapeHtml(item.link || "")}"
-                    >
-                </div>
+                
 
                 <div class="service-field">
                     <label>Thứ tự hiển thị</label>
@@ -3315,10 +3307,6 @@ async function updateServiceItem(editor) {
 
         description:
             editor.querySelector(".service-description")
-            ?.value.trim() || "",
-
-        link:
-            editor.querySelector(".service-link")
             ?.value.trim() || "",
 
         sort_order:
