@@ -622,7 +622,12 @@ function renderSiteContent(items) {
 
         return;
     }
-
+items = items.filter(
+    item =>
+        item.section_key !== "services" &&
+        item.section_key !== "projects" &&
+        item.section_key !== "contact"
+);
     items.forEach(item => {
 
         const editor =
@@ -715,15 +720,7 @@ function renderSiteContent(items) {
                 </div>
 
 
-                <div class="content-field full">
-                    <label>Image URL</label>
-
-                    <input
-                        type="text"
-                        class="content-image-url"
-                        value="${escapeHtml(item.image_url || "")}"
-                    >
-                </div>
+               
 
             </div>
 
@@ -812,9 +809,6 @@ async function updateSiteContent(editor) {
             editor.querySelector(".content-button-link")
             ?.value.trim() || "",
 
-        image_url:
-            editor.querySelector(".content-image-url")
-            ?.value.trim() || "",
 
         is_active:
             editor.querySelector(".content-active")
