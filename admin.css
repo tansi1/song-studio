@@ -2327,3 +2327,19 @@ body {
     }
 
 }
+.footer-logo-preview {
+    display: block;
+    width: 160px;
+    max-width: 160px;
+    height: 90px;
+    max-height: 90px;
+
+    object-fit: contain;
+
+    margin: 0 0 14px;
+
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 10px;
+}
