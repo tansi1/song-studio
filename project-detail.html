@@ -16,39 +16,31 @@
 </head>
 
 <body>
-    <header class="site-header">
+   <header class="header">
 
-    <div class="header-inner">
+    <a href="index.html" class="brand">
+        <img
+            src="pic/icon_logo.png"
+            alt="Sóng Studio"
+            class="header-logo"
+        >
+    </a>
 
-        <a href="index.html" class="header-logo">
-            <img src="pic/icon_logo.png">
-        </a>
+    <nav class="nav" id="navMenu">
+        <a href="index.html">Trang chủ</a>
+        <a href="index.html#about">Giới thiệu</a>
+        <a href="index.html#services">Dịch vụ</a>
+        <a href="index.html#projects" class="active">Dự án</a>
+        <a href="index.html#contact">Liên hệ</a>
+    </nav>
 
-        <nav class="header-nav">
-
-            <a href="index.html#home">
-                Trang chủ
-            </a>
-
-            <a href="index.html#about">
-                Giới thiệu
-            </a>
-
-            <a href="index.html#services">
-                Dịch vụ
-            </a>
-
-            <a href="index.html#projects" class="active">
-                Dự án
-            </a>
-
-            <a href="index.html#contact">
-                Liên hệ
-            </a>
-
-        </nav>
-
-    </div>
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Mở menu"
+    >
+        ☰
+    </button>
 
 </header>
     <main class="project-detail-page">

@@ -1671,14 +1671,14 @@ function renderServiceItemsPublic(items) {
     if (!cards.length) return;
 
     items.forEach((item, index) => {
-        const image =
-            card.querySelector(".service-image img");
+        
 
         const card =
             cards[index];
 
         if (!card) return;
-
+        const image =
+            card.querySelector(".service-image img");
         const number =
             card.querySelector(".service-number");
 

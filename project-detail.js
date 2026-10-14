@@ -253,3 +253,21 @@ function getProjectVideoEmbed(url) {
 }
 
 loadProjectDetail();
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const navMenu =
+    document.getElementById("navMenu");
+
+menuToggle?.addEventListener("click", () => {
+
+    navMenu?.classList.toggle("open");
+
+    if (navMenu?.classList.contains("open")) {
+        menuToggle.textContent = "✕";
+    } else {
+        menuToggle.textContent = "☰";
+    }
+
+});

@@ -3227,13 +3227,31 @@ function renderServiceItems(items) {
                     >${escapeHtml(item.description || "")}</textarea>
                 </div>
                 <div class="service-field full">
+    <div class="service-field full">
     <label>Ảnh dịch vụ</label>
 
+    ${
+        item.image_url
+            ? `
+                <img
+                    src="${escapeHtml(item.image_url)}"
+                    class="service-image-preview"
+                    alt="Ảnh dịch vụ"
+                >
+            `
+            : ""
+    }
+
     <input
-        type="text"
+        type="file"
+        class="service-image-file"
+        accept="image/png,image/jpeg,image/webp"
+    >
+
+    <input
+        type="hidden"
         class="service-image-url"
         value="${escapeHtml(item.image_url || "")}"
-        placeholder="Dán URL ảnh..."
     >
 </div>
                 
@@ -3303,11 +3321,31 @@ async function updateServiceItem(editor) {
 
     const status =
         editor.querySelector(".service-status");
+    const imageInput =
+    editor.querySelector(".service-image-file");
 
+let imageUrl =
+    editor.querySelector(".service-image-url")
+        ?.value || "";
+
+if (
+    imageInput &&
+    imageInput.files &&
+    imageInput.files.length > 0
+) {
+    try {
+        imageUrl =
+            await uploadServiceImage(
+                imageInput.files[0],
+                id
+            );
+    } catch (error) {
+        alert("Upload ảnh thất bại.");
+        return;
+    }
+}
     const payload = {
-        image_url:
-            editor.querySelector(".service-image-url")
-            ?.value.trim() || "",
+        image_url: imageUrl,
         number:
             editor.querySelector(".service-number")
             ?.value.trim() || "",
@@ -3849,4 +3887,43 @@ async function deleteMessage(card) {
     }
 
     await loadMessages();
+}
+async function uploadServiceImage(file, serviceId) {
+
+    if (!file) return null;
+
+    const extension =
+        file.name.split(".").pop();
+
+    const fileName =
+        `${serviceId}-${Date.now()}.${extension}`;
+
+    const filePath =
+        `services/${fileName}`;
+
+    const {
+        error: uploadError
+    } = await supabase.storage
+        .from("service-images")
+        .upload(filePath, file, {
+            cacheControl: "3600",
+            upsert: false
+        });
+
+    if (uploadError) {
+        console.error(
+            "Upload service image error:",
+            uploadError
+        );
+
+        throw uploadError;
+    }
+
+    const {
+        data
+    } = supabase.storage
+        .from("service-images")
+        .getPublicUrl(filePath);
+
+    return data.publicUrl;
 }
