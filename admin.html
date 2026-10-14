@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sóng Studio Admin</title>
+<link
+    rel="icon"
+    type="image/png"
+    href="pic/icon_logo.png"
+>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="admin">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="admin-brand">
+  <img src="pic/ngang_logo.png" alt="" class="admin-brand-logo">
+  <p>ADMIN</p>
+</div>
+
+        <nav class="admin-nav">
+
+            <button class="nav-item active" data-page="dashboard">
+                Dashboard
+            </button>
+
+            <button class="nav-item" data-page="banner">
+                Banner
+            </button>
+
+            <button class="nav-item" data-page="projects">
+                Dự án
+            </button>
+
+            <button class="nav-item" data-page="content">
+                Nội dung
+            </button>
+
+            <button class="nav-item" data-page="contact">
+                Liên hệ
+            </button>
+
+            <button class="nav-item" data-page="social">
+                Social Media
+            </button>
+
+            <button class="nav-item" data-page="messages">
+                Tin nhắn
+            </button>
+
+        </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="admin-main">
+
+        <header class="admin-header">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Quản lý website Sóng Studio</p>
+            </div>
+
+           <div class="admin-account">
+
+    <span id="adminEmail">
+        Admin
+    </span>
+      <a
+        href="index.html"
+        target="_blank"
+        class="view-site-btn"
+    >
+        Xem website
+    </a>
+    <button
+        id="logoutBtn"
+        class="logout-btn"
+    >
+        Đăng xuất
+    </button>
+
+</div>
+
+        </header>
+
+        <!-- DASHBOARD -->
+        <section class="admin-page active" id="dashboard">
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <span>Banner</span>
+                    <strong>03</strong>
+                    <p>Banner đang hoạt động</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>Dự án</span>
+                    <strong>12</strong>
+                    <p>Dự án đã đăng</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>Tin nhắn</span>
+                    <strong>08</strong>
+                    <p>Liên hệ mới</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>Social</span>
+                    <strong>05</strong>
+                    <p>Kênh đang kết nối</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BANNER -->
+        <!-- =========================
+     BANNER MANAGER
+========================= -->
+
+<section class="admin-page" id="banner">
+
+    <div class="page-title">
+
+        <div>
+            <h2>Quản lý Banner</h2>
+            <p class="page-description">
+                Chỉnh sửa nội dung slideshow trên trang chủ.
+            </p>
+        </div>
+
+        <button
+            type="button"
+            class="primary-btn"
+            id="addBannerBtn"
+        >
+            + Thêm banner
+        </button>
+
+    </div>
+
+    <div id="bannerList">
+
+        <p class="loading-text">
+            Đang tải banner...
+        </p>
+
+    </div>
+
+</section>
+
+       <!-- PROJECT -->
+<section class="admin-page" id="projects">
+
+    <div class="page-title">
+
+        <div>
+            <h2>Quản lý Dự án</h2>
+
+            <p class="page-description">
+                Thêm, chỉnh sửa và quản lý các dự án của Sóng Studio.
+            </p>
+        </div>
+
+        <button
+            type="button"
+            class="primary-btn"
+            id="addProjectBtn"
+        >
+            + Thêm dự án
+        </button>
+
+    </div>
+
+
+    <div id="projectList">
+
+        <p class="loading-text">
+            Đang tải dự án...
+        </p>
+
+    </div>
+
+</section>
+<section class="admin-page" id="content">
+
+    <div class="page-title">
+
+        <div>
+            <h2>Quản lý Nội dung</h2>
+
+            <p class="page-description">
+                Chỉnh sửa nội dung các section trên website Sóng Studio.
+            </p>
+        </div>
+
+    </div>
+
+    <div id="contentList">
+        <p class="loading-text">
+            Đang tải nội dung...
+        </p>
+    </div>
+    <div class="content-subsection">
+
+    <div class="content-subsection-head">
+        <div>
+            <h3>Tầm nhìn – Sứ mệnh – Giá trị cốt lõi</h3>
+
+            <p>
+                Chỉnh sửa nội dung 3 thẻ giới thiệu định hướng của Sóng Studio.
+            </p>
+        </div>
+    </div>
+
+    <div id="visionList">
+        <p class="loading-text">
+            Đang tải nội dung...
+        </p>
+    </div>
+    <div class="content-subsection">
+
+    <div class="content-subsection-head">
+        <div>
+            <h3>Dịch vụ</h3>
+
+            <p>
+                Chỉnh sửa 3 thẻ dịch vụ hiển thị trên trang chủ.
+            </p>
+        </div>
+    </div>
+
+    <div id="serviceList">
+        <p class="loading-text">
+            Đang tải dịch vụ...
+        </p>
+    </div>
+
+</div>
+</div>
+</section>
+<section class="admin-page" id="contact">
+
+    <div class="page-title">
+        <div>
+            <h2>Quản lý Liên hệ</h2>
+            <p class="page-description">
+                Chỉnh sửa email, số điện thoại, địa chỉ và nội dung footer.
+            </p>
+        </div>
+    </div>
+
+    <div id="contactInfoPanel">
+        <p class="loading-text">
+            Đang tải thông tin liên hệ...
+        </p>
+    </div>
+
+</section>
+        <!-- CONTACT -->
+        
+
+        <!-- SOCIAL -->
+       <!-- SOCIAL MEDIA -->
+<section class="admin-page" id="social">
+
+    <div class="page-title">
+        <div>
+            <h2>Quản lý Social Media</h2>
+
+            <p class="page-description">
+                Chỉnh sửa đường dẫn Facebook, Instagram, TikTok, YouTube và Zalo.
+            </p>
+        </div>
+    </div>
+
+    <div id="socialList">
+        <p class="loading-text">
+            Đang tải Social Media...
+        </p>
+    </div>
+
+</section>
+        <!-- MESSAGES -->
+      <section class="admin-page" id="messages">
+
+    <div class="page-title">
+        <div>
+            <h2>Tin nhắn</h2>
+
+            <p class="page-description">
+                Quản lý các yêu cầu liên hệ gửi từ website.
+            </p>
+        </div>
+    </div>
+
+    <div id="messageList">
+        <p class="loading-text">
+            Đang tải tin nhắn...
+        </p>
+    </div>
+
+</section>
+    </main>
+
+</div>
+
+<script
+    type="module"
+    src="admin.js"
+></script>
+
+</body>
+</html>

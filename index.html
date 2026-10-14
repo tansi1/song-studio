@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Sóng Studio - Studio sáng tạo chuyên sản xuất video, quay dựng phim và truyền thông hình ảnh.">
+
+    <title>Sóng Studio | Chạm cảm xúc - Lan sáng tạo</title>
+
+    <!-- GOOGLE FONTS -->
+     <link rel="icon" type="image/png" href="pic/icon_logo.png">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JAVASCRIPT -->
+
+    <script type="module" src="script.js"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+
+</head>
+
+
+<body class="intro-active">
+
+<!-- LỚP CHUYỂN CẢNH -->
+
+<div id="page-transition"></div>
+
+
+    <!-- ==============================
+         01. INTRO - CHỈ CÓ ẢNH LOGO
+    =============================== -->
+
+    <div id="intro" class="intro">
+
+        <img
+            src="pic/doc_logo.png"
+            alt=""
+            class="intro-logo"
+        >
+
+    </div>
+
+
+
+    <!-- ==============================
+         02. WEBSITE CHÍNH
+    =============================== -->
+
+    <div id="website" class="website">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <!-- LOGO HEADER -->
+
+    
+        <a href="#home" class="brand">
+            <img src="pic/icon_logo.png" alt="" class="header-logo">
+        </a>
+
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-toggle"
+                aria-label="Mở menu"
+                aria-expanded="false"
+                aria-controls="main-nav"
+            >
+                ☰
+            </button>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav" id="main-nav">
+
+                <a href="#home" class="active">
+                    Trang chủ
+                </a>
+
+                <a href="#about">
+                    Giới thiệu
+                </a>
+
+                <a href="#services">
+                    Dịch vụ
+                </a>
+
+                <a href="#projects">
+                    Dự án
+                </a>
+
+                <a href="#contact">
+                    Liên hệ
+                </a>
+
+
+            </nav>
+
+        </header>
+
+
+
+        <!-- ==============================
+             03. HERO SLIDESHOW
+        =============================== -->
+
+       <section class="hero" id="home">
+
+    <!-- SLIDES ĐƯỢC SUPABASE TẠO TỰ ĐỘNG -->
+
+    <div class="slides" id="slides"></div>
+
+
+    <!-- CONTROLS -->
+
+    <div class="slider-controls">
+
+        <button
+            class="arrow prev"
+            aria-label="Slide trước"
+        >
+            ❮
+        </button>
+
+
+        <div
+            class="dots"
+            id="sliderDots"
+        ></div>
+
+
+        <button
+            class="arrow next"
+            aria-label="Slide tiếp theo"
+        >
+            ❯
+        </button>
+
+    </div>
+
+</section>
+
+
+        <!-- ==============================
+             04. ABOUT
+        =============================== -->
+
+        <section class="about section" id="about">
+
+            <div class="container">
+
+
+                <span class="section-label">
+                    01 / VỀ CHÚNG TÔI
+                </span>
+
+
+                <div class="about-grid">
+
+
+                    <!-- BÊN TRÁI -->
+
+                    <div class="about-heading">
+
+                        <h2>
+
+                            CHÚNG TÔI LÀ<br>
+
+                            <span>
+                                SÓNG STUDIO.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+
+                    <!-- BÊN PHẢI -->
+
+                    <div class="about-content">
+
+                        <p>
+
+                            Sóng Studio là studio sáng tạo
+                            chuyên về sản xuất video,
+                            quay dựng phim và phát triển
+                            nội dung truyền thông hình ảnh.
+
+                        </p>
+
+                        <p>
+
+                            Chúng tôi tin rằng mỗi ý tưởng
+                            đều có một câu chuyện riêng.
+                            Bằng sự sáng tạo và tư duy
+                            hình ảnh, Sóng Studio mang đến
+                            những sản phẩm truyền thông
+                            giàu cảm xúc và có giá trị.
+
+                        </p>
+
+
+                        <a href="#services" class="text-btn">
+
+                            Khám phá dịch vụ ↗
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             05. SERVICES
+        =============================== -->
+<!-- ==============================
+     TẦM NHÌN - SỨ MỆNH - GIÁ TRỊ
+============================== -->
+
+<section class="vision-section section" id="vision">
+
+    <div class="container">
+
+        <div class="vision-heading">
+
+            <span class="section-label">
+                ĐỊNH HƯỚNG PHÁT TRIỂN
+            </span>
+
+            <h2 class="section-title">
+                ĐIỀU TẠO NÊN
+                <span>SÓNG STUDIO.</span>
+            </h2>
+
+            <p>
+                Những giá trị định hình tư duy,
+                định hướng hành động và là nền tảng
+                cho hành trình sáng tạo của chúng tôi.
+            </p>
+
+        </div>
+
+
+        <div class="vision-grid">
+
+            <!-- TẦM NHÌN -->
+
+            <div class="vision-card">
+
+                <div class="vision-icon">
+                    ◉
+                </div>
+
+                <span class="vision-number">01</span>
+
+                <h3>TẦM NHÌN</h3>
+
+                <p>
+                    Trở thành studio sáng tạo
+                    được tin tưởng, mang đến
+                    những sản phẩm hình ảnh
+                    có dấu ấn riêng và tạo ra
+                    giá trị bền vững cho
+                    thương hiệu.
+                </p>
+
+            </div>
+
+
+            <!-- SỨ MỆNH -->
+
+            <div class="vision-card">
+
+                <div class="vision-icon">
+                    ◎
+                </div>
+
+                <span class="vision-number">02</span>
+
+                <h3>SỨ MỆNH</h3>
+
+                <p>
+                    Biến những ý tưởng thành
+                    những câu chuyện giàu cảm xúc
+                    thông qua ngôn ngữ hình ảnh,
+                    giúp thương hiệu kết nối
+                    với khán giả và truyền tải
+                    thông điệp hiệu quả.
+                </p>
+
+            </div>
+
+
+            <!-- GIÁ TRỊ CỐT LÕI -->
+
+            <div class="vision-card">
+
+                <div class="vision-icon">
+                    ✧
+                </div>
+
+                <span class="vision-number">03</span>
+
+                <h3>GIÁ TRỊ CỐT LÕI</h3>
+
+                <p>
+                    Sáng tạo trong tư duy,
+                    tận tâm trong công việc,
+                    chất lượng trong từng sản phẩm
+                    và không ngừng đổi mới
+                    để mang đến những
+                    giải pháp khác biệt.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+        <section class="services section" id="services">
+
+
+            <div class="container">
+
+
+                <span class="section-label">
+                    02 / CHUYÊN MÔN
+                </span>
+
+
+                <h2 class="section-title">
+
+                    DỊCH VỤ
+
+                    <span>
+                        CỦA CHÚNG TÔI.
+                    </span>
+
+                </h2>
+
+
+
+                <div class="service-grid">
+
+
+                    <!-- SERVICE 01 -->
+
+                    <div class="service-card">
+
+                        <span class="service-number">
+                            01
+                        </span>
+
+
+                        <div class="service-content">
+
+                            <h3>
+                                VIDEO PRODUCTION
+                            </h3>
+
+                            <p>
+
+                                Sản xuất TVC, video doanh nghiệp,
+                                phim quảng cáo và video sự kiện.
+
+                            </p>
+
+                        </div>
+
+
+                        <span class="service-icon">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- SERVICE 02 -->
+
+                    <div class="service-card">
+
+                        <span class="service-number">
+                            02
+                        </span>
+
+
+                        <div class="service-content">
+
+                            <h3>
+                                POST-PRODUCTION
+                            </h3>
+
+                            <p>
+
+                                Dựng phim, chỉnh màu,
+                                thiết kế chuyển động
+                                và hoàn thiện hậu kỳ.
+
+                            </p>
+
+                        </div>
+
+
+                        <span class="service-icon">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- SERVICE 03 -->
+
+                    <div class="service-card">
+
+                        <span class="service-number">
+                            03
+                        </span>
+
+
+                        <div class="service-content">
+
+                            <h3>
+                                CREATIVE CONTENT
+                            </h3>
+
+                            <p>
+
+                                Phát triển ý tưởng,
+                                xây dựng kịch bản
+                                và sáng tạo nội dung.
+
+                            </p>
+
+                        </div>
+
+
+                        <span class="service-icon">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             06. PROJECTS
+        =============================== -->
+
+        <section class="projects section" id="projects">
+
+            <div class="container">
+
+
+                <span class="section-label">
+                    03 / PORTFOLIO
+                </span>
+
+
+                <h2 class="section-title">
+
+                    DỰ ÁN
+
+                    <span>
+                        TIÊU BIỂU.
+                    </span>
+
+                </h2>
+
+
+
+               <div id="projectsGrid" class="projects-grid">
+
+    <p class="projects-loading">
+        Đang tải dự án...
+    </p>
+
+</div>
+        </section>
+
+
+
+        <!-- ==============================
+             07. CONTACT
+        =============================== -->
+
+        <section class="contact section" id="contact">
+
+            <div class="container">
+
+
+                <span class="section-label">
+                    04 / LIÊN HỆ
+                </span>
+
+
+                <h2>
+
+                    BẮT ĐẦU MỘT<br>
+
+                    <span>
+                        CÂU CHUYỆN MỚI.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Hãy cùng Sóng Studio biến những
+                    ý tưởng của bạn thành hiện thực.
+
+                </p>
+
+
+                
+                <button type="button" class="main-btn" id="openContact">
+                    Liên hệ với Sóng qua Email 
+                </button>
+<!-- SOCIAL MEDIA -->
+
+<div class="contact-social">
+
+    <a
+    href="https://facebook.com/"
+    target="_blank"
+    aria-label="Facebook"
+    data-social="facebook"
+>
+    <i class="fa-brands fa-facebook-f"></i>
+</a>
+    <a
+    href="https://instagram.com/"
+    target="_blank"
+    aria-label="Instagram"
+    data-social="instagram"
+>
+    <i class="fa-brands fa-instagram"></i>
+</a>
+    <a
+    href="https://tiktok.com/"
+    target="_blank"
+    aria-label="TikTok"
+    data-social="tiktok"
+>
+    <i class="fa-brands fa-tiktok"></i>
+</a>
+
+    <a
+    href="https://youtube.com/"
+    target="_blank"
+    aria-label="YouTube"
+    data-social="youtube"
+>
+    <i class="fa-brands fa-youtube"></i>
+</a>
+
+</div>
+
+
+                            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             08. FOOTER
+        =============================== -->
+
+       <!-- ==============================
+     FOOTER
+============================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- CỘT 1: LOGO DOANH NGHIỆP -->
+
+        <div class="footer-column footer-about">
+
+            <a href="#home" class="footer-logo">
+                <img
+                    src="pic/icon_logo.png"
+                    alt="Sóng Studio"
+                >
+            </a>
+
+            <p class="footer-tagline" id="footerTagline">
+                Chạm cảm xúc - Lan sáng tạo
+            </p>
+
+            <p class="footer-description">
+                Sóng Studio chuyên sản xuất video,
+                quay dựng phim và sáng tạo nội dung
+                truyền thông hình ảnh.
+            </p>
+
+        </div>
+
+
+        <!-- CỘT 2: THÔNG TIN LIÊN HỆ -->
+
+        <div class="footer-column footer-contact">
+
+            <h3>THÔNG TIN LIÊN HỆ</h3>
+
+            <div class="footer-contact-item">
+
+                <span class="footer-icon">⌖</span>
+
+                <p id="footerAddress">
+                    TP. Hồ Chí Minh, Việt Nam
+                </p>
+
+            </div>
+
+            <div class="footer-contact-item">
+
+                <span class="footer-icon">✉</span>
+
+                <a id="footerEmail"
+                href="mailto:hello@songstudio.vn">
+                    songstudio.contact@gmail.com
+                </a>
+
+            </div>
+
+            <div class="footer-contact-item">
+
+                <span class="footer-icon">☎</span>
+
+                <a id="footerPhone"
+                href="tel:0900000000">
+                    0900 000 000
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CỘT 3: LIÊN KẾT NHANH -->
+
+        <div class="footer-column footer-links">
+
+            <h3>LIÊN KẾT NHANH</h3>
+
+            <a href="#home">Trang chủ</a>
+
+            <a href="#about">Giới thiệu</a>
+
+            <a href="#services">Dịch vụ</a>
+
+            <a href="#projects">Dự án</a>
+
+            <a href="#contact">Liên hệ</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ĐƯỜNG PHÂN CÁCH -->
+
+    <div class="footer-divider"></div>
+
+
+    <!-- PHẦN CUỐI FOOTER -->
+
+    <div class="footer-bottom">
+
+        <p id="footerCopyright">
+            © 2026 SÓNG STUDIO.
+            ALL RIGHTS RESERVED.
+        </p>
+
+        <p>
+            DESIGNED TẤN SĨ
+        </p>
+
+    </div>
+
+</footer>
+<!-- FORM LIÊN HỆ POPUP -->
+
+<div id="contactModal" class="contact-modal">
+
+    <div class="modal-box">
+
+        <!-- NÚT ĐÓNG -->
+        <button type="button" id="closeContact" class="modal-close">
+            &times;
+        </button>
+
+        <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+
+        <p>
+            Hãy để lại thông tin,
+            Sóng Studio sẽ liên hệ với bạn.
+        </p>
+<!-- FORM LIÊN HỆ -->
+
+<form id="contactForm">
+
+    <!-- HỌ VÀ TÊN -->
+
+    <div class="form-group">
+
+        <label for="customerName">
+            Họ và tên *
+        </label>
+
+        <input
+            type="text"
+            id="customerName"
+            name="name"
+            placeholder="Nhập họ và tên"
+            required
+        >
+
+    </div>
+
+
+    <!-- EMAIL -->
+
+    <div class="form-group">
+
+        <label for="customerEmail">
+            Email *
+        </label>
+
+        <input
+            type="email"
+            id="customerEmail"
+            name="email"
+            placeholder="Nhập email"
+            required
+        >
+
+    </div>
+
+
+    <!-- SỐ ĐIỆN THOẠI -->
+
+    <div class="form-group">
+
+        <label for="customerPhone">
+            Số điện thoại
+        </label>
+
+        <input
+            type="tel"
+            id="customerPhone"
+            name="phone"
+            placeholder="Nhập số điện thoại"
+        >
+
+    </div>
+
+
+    <!-- NỘI DUNG -->
+
+    <div class="form-group">
+
+        <label for="customerMessage">
+            Nội dung liên hệ *
+        </label>
+
+        <textarea
+            id="customerMessage"
+            name="message"
+            rows="4"
+            placeholder="Nhập nội dung..."
+            required
+        ></textarea>
+
+    </div>
+
+
+    <!-- THÔNG BÁO TRẠNG THÁI -->
+
+    <p id="formStatus"
+       role="status"
+       aria-live="polite"></p>
+
+
+    <!-- NÚT GỬI -->
+
+    <button type="submit" class="submit-btn">
+
+        GỬI THÔNG TIN ↗
+
+    </button>
+
+</form>
+    </div>
+
+</div>
+</body>
+
+</html>
