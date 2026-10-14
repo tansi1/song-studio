@@ -3226,7 +3226,16 @@ function renderServiceItems(items) {
                         class="service-description"
                     >${escapeHtml(item.description || "")}</textarea>
                 </div>
+                <div class="service-field full">
+    <label>Ảnh dịch vụ</label>
 
+    <input
+        type="text"
+        class="service-image-url"
+        value="${escapeHtml(item.image_url || "")}"
+        placeholder="Dán URL ảnh..."
+    >
+</div>
                 
 
                 <div class="service-field">
@@ -3296,7 +3305,9 @@ async function updateServiceItem(editor) {
         editor.querySelector(".service-status");
 
     const payload = {
-
+        image_url:
+            editor.querySelector(".service-image-url")
+            ?.value.trim() || "",
         number:
             editor.querySelector(".service-number")
             ?.value.trim() || "",

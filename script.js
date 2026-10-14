@@ -1570,7 +1570,7 @@ function renderVisionItemsPublic(items) {
 
 
     items.forEach((item, index) => {
-
+        
         const card =
             cards[index];
 
@@ -1671,6 +1671,8 @@ function renderServiceItemsPublic(items) {
     if (!cards.length) return;
 
     items.forEach((item, index) => {
+        const image =
+            card.querySelector(".service-image img");
 
         const card =
             cards[index];
@@ -1704,6 +1706,10 @@ function renderServiceItemsPublic(items) {
             description.textContent =
                 item.description || "";
         }
+        if (image && item.image_url) {
+            image.src = item.image_url;
+            image.alt = item.title || "Service";
+}
 
     });
 }
