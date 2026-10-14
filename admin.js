@@ -625,7 +625,6 @@ function renderSiteContent(items) {
 items = items.filter(
     item =>
         item.section_key !== "services" &&
-        item.section_key !== "projects" &&
         item.section_key !== "contact"
 );
     items.forEach(item => {
