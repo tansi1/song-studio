@@ -1082,97 +1082,41 @@ button {
 
 
 .service-card {
-
-    min-height: 330px;
-
-    padding: 32px;
+    min-height: 360px;
+    padding: 34px 36px;
 
     display: flex;
-
     flex-direction: column;
+    justify-content: flex-start;
 
-    justify-content: space-between;
+    background: #132541;
+    border: 1px solid rgba(78, 166, 255, 0.16);
+    border-radius: 14px;
 
-    background: linear-gradient(
-
-        145deg,
-
-        #152641,
-
-        #0C1425
-
-    );
-
-    border: 1px solid
-        rgba(255, 255, 255, 0.08);
-
-    border-radius: 8px;
-
-    transition:
-
-        transform 0.4s ease,
-
-        border-color 0.4s ease,
-
-        background 0.4s ease;
-
+    transition: 0.3s ease;
 }
-
 
 .service-card:hover {
-
-    transform: translateY(-10px);
-
-    border-color: var(--blue);
-
-    background: #172F52;
-
+    transform: translateY(-6px);
+    border-color: #4ea6ff;
 }
-
 
 .service-number {
-
-    color: var(--blue);
-
-    font-size: 12px;
-
-    font-weight: 700;
-
+    margin-bottom: 70px;
 }
 
+.service-content {
+    margin-top: 0;
+}
 
 .service-content h3 {
-
-    font-size: 19px;
-
-    font-weight: 800;
-
-    margin-bottom: 18px;
-
+    margin-bottom: 24px;
 }
-
 
 .service-content p {
-
-    color: var(--gray);
-
-    font-size: 13px;
-
-    line-height: 1.9;
-
+    max-width: 430px;
+    line-height: 1.7;
 }
-
-
-.service-icon {
-
-    align-self: flex-end;
-
-    color: var(--blue);
-
-    font-size: 26px;
-
-}
-
 
 
 /* ======================================
